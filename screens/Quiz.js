@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const Quiz = ({ navigation, route }) => {
-    const params = route.params
+    const { url } = route.params
+    
     const shuffleAnswers = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -16,11 +17,12 @@ const Quiz = ({ navigation, route }) => {
     const [options, setOptions] = useState([]);
     const [score, setScore] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
+    const [apiUrl, setApiUrl] = useState('');
     
     const getQuiz = async () => {
         setIsLoading(true);
-        const url = 'https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=multiple&encode=url3986'
-        const res = await fetch(url);
+        const apiUrl = (url)
+        const res = await fetch(apiUrl);
         const data = await res.json();
         setQuestions(data.results);
         setOptions(data.results);

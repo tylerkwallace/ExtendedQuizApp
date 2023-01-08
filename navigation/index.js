@@ -3,7 +3,7 @@ import Home from "../screens/Home";
 import Quiz from "../screens/Quiz";
 import Result from "../screens/Result";
 import React from "react";
-import Categories from "../screens/Categories"
+import Categories from "../screens/Categories";
 
 const Stack = createNativeStackNavigator();
 
@@ -12,6 +12,7 @@ function MyStack() {
 
         <Stack.Navigator>
             <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
+            <Stack.Screen name="Categories" component={Categories} options={{headerShown: false}} />
             <Stack.Screen name="Quiz" component={Quiz} options={{headerShown: false}} />
             <Stack.Screen name="Result" component={Result} options={{headerShown: false}} />
         </Stack.Navigator>
