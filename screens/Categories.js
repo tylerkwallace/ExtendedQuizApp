@@ -25,7 +25,6 @@ const Categories = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Title titleText='Categories' />
-            <Text>Choose a category!</Text>
             <View style={styles.options}>
                 <TouchableOpacity style={styles.optionButton} onPress={() => handleSelectedCategory('Music')}>
                     <Text style={styles.option}>Music</Text>
@@ -90,6 +89,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 12,
         borderRadius: 12,
     },
-    
+    category: {
+        fontSize: 20,
 
+    },
 });

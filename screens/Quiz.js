@@ -94,9 +94,6 @@ const Quiz = ({ navigation, route }) => {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.bottom}>
-                        {/* <TouchableOpacity style={styles.button}>
-                            <Text style={styles.buttonText}>BACK</Text>
-                        </TouchableOpacity> */}
 
                         {questionNum !== 9 &&
                             <TouchableOpacity style={styles.button} onPress={handleNextPress}>
@@ -109,9 +106,6 @@ const Quiz = ({ navigation, route }) => {
                                 <Text style={styles.buttonText}>SHOW RESULTS</Text>
                             </TouchableOpacity>
                         }
-                        {/* <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>END</Text>
-                </TouchableOpacity> */}
                     </View>
                 </View>
             )}
